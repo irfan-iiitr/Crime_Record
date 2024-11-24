@@ -25,7 +25,7 @@ export default function AddRecordForm({ onRecordAdded }) {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/records`, formData, {
+            await axios.post('https://crime-record.onrender.com/api/records', formData, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

@@ -22,7 +22,7 @@ export default function Dashboard() {
         const fetchRecords = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/records`, {
+                const response = await axios.get('https://crime-record.onrender.com/api/records', {
                     headers: { Authorization: `Bearer ${token}` },
                     params: { age: ageFilter, crime: crimeFilter }
                 });
